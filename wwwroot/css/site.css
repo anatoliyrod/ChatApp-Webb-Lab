@@ -1,0 +1,88 @@
+@import url('open-iconic/font/css/open-iconic-bootstrap.min.css');
+
+/* Setările globale pentru font */
+html, body {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; /* Alegere de font */
+}
+
+/* Stiluri pentru link-uri și butoane */
+a, .btn-link {
+    color: #0366d6; /* Culoare de bază pentru link-uri și butoane */
+    transition: color 0.3s ease; /* Tranziție la schimbarea culorii */
+}
+
+/* Stiluri pentru butoanele primare */
+.btn-primary {
+    color: #fff; /* Culoare text pentru butoane primare */
+    background-color: #1b6ec2; /* Culoare de fundal pentru butoane primare */
+    border-color: #1861ac; /* Culoare pentru bordură */
+    transition: background-color 0.3s ease, border-color 0.3s ease; /* Tranziție la schimbarea culorii de fundal și a culorii border-ului */
+}
+
+/* Adăugare spațiu de sus pentru conținut */
+.content {
+    padding-top: 1.1rem; /* Padding-ul de sus pentru conținut */
+}
+
+/* Stiluri pentru câmpurile valide */
+.valid.modified:not([type=checkbox]) {
+    outline: 1px solid #26b050; /* Bordură verde pentru câmpurile valide */
+}
+
+/* Stiluri pentru câmpurile invalide */
+.invalid {
+    outline: 1px solid red; /* Bordură roșie pentru câmpurile invalide */
+}
+
+/* Stiluri pentru mesajele de validare */
+.validation-message {
+    color: red; /* Culoare text pentru mesajele de validare */
+}
+
+/* Stiluri pentru mesajele de eroare Blazor */
+#blazor-error-ui {
+    background: lightyellow; /* Fundal pentru mesajele de eroare Blazor */
+    bottom: 0; /* Poziționare la partea de jos */
+    box-shadow: 0 -1px 2px rgba(0, 0, 0, 0.2); /* Umbra */
+    display: none; /* Inițial ascuns */
+    left: 0; /* Poziționare la stânga */
+    padding: 0.6rem 1.25rem 0.7rem 1.25rem; /* Padding */
+    position: fixed; /* Poziționare fixă */
+    width: 100%; /* Lățime de 100% */
+    z-index: 1000; /* Z-index */
+}
+
+/* Stiluri pentru butonul de închidere a mesajului de eroare Blazor */
+#blazor-error-ui .dismiss {
+    cursor: pointer; /* Cursor pointer */
+    position: absolute; /* Poziționare absolută */
+    right: 0.75rem; /* Poziționare la dreapta */
+    top: 0.5rem; /* Poziționare la partea de sus */
+    transition: color 0.3s ease; /* Tranziție la schimbarea culorii */
+}
+
+/* Stiluri pentru culorile verzi */
+.color-green {
+    background-color: #5CDB94; /* Culoare verde */
+    transition: background-color 0.3s ease; /* Tranziție la schimbarea culorii */
+}
+
+/* Stiluri pentru link-uri și butoane la hover */
+a:hover, .btn-link:hover {
+    color: #024999; /* Schimbare culoare la hover */
+}
+
+.btn-primary:hover {
+    background-color: #245aa5; /* Schimbare culoare de fundal la hover */
+    border-color: #1b548f; /* Schimbare culoare bordură la hover */
+}
+
+/* Stiluri pentru butonul de închidere a mesajului de eroare Blazor la hover */
+#blazor-error-ui .dismiss:hover {
+    color: red; /* Schimbare culoare la hover */
+}
+
+/* Stiluri pentru culoarea verde la hover */
+.color-green:hover {
+    background-color: #4dbb80; /* Schimbare culoare de fundal la hover */
+}

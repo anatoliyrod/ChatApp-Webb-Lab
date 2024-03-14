@@ -1,0 +1,95 @@
+/* Stiluri pentru butonul de deschidere/închidere a meniului de navigare */
+.navbar-toggler {
+    background-color: rgba(255, 255, 255, 0.1); /* Fond semi-transparent */
+    transition: background-color 0.3s ease; /* Tranziție la schimbarea culorii de fundal */
+}
+
+/* Stiluri pentru bara de sus */
+.top-row {
+    height: 3.5rem; /* Înălțimea barei de sus */
+    background-color: rgba(0, 0, 0, 0.4); /* Fond semi-transparent */
+    transition: background-color 0.3s ease; /* Tranziție la schimbarea culorii de fundal */
+}
+
+/* Stiluri pentru titlul aplicației */
+.navbar-brand {
+    font-size: 1.1rem; /* Dimensiunea fontului */
+    transition: font-size 0.3s ease; /* Tranziție la schimbarea dimensiunii fontului */
+}
+
+/* Stiluri pentru pictogramele Open Iconic */
+.oi {
+    width: 2rem; /* Lățimea */
+    font-size: 1.1rem; /* Dimensiunea fontului */
+    vertical-align: text-top; /* Aliniere verticală */
+    top: -2px; /* Poziționare */
+    transition: all 0.3s ease; /* Tranziție la schimbarea tuturor proprietăților */
+}
+
+/* Stiluri pentru elementele de meniu */
+.nav-item {
+    font-size: 0.9rem; /* Dimensiunea fontului */
+    padding-bottom: 0.5rem; /* Padding la partea de jos */
+    transition: padding 0.3s ease, font-size 0.3s ease; /* Tranziție la schimbarea padding-ului și dimensiunii fontului */
+}
+
+.nav-item:first-of-type {
+    padding-top: 1rem; /* Padding la partea de sus pentru primul element de meniu */
+}
+
+.nav-item:last-of-type {
+    padding-bottom: 1rem; /* Padding la partea de jos pentru ultimul element de meniu */
+}
+
+/* Stiluri pentru link-urile din meniul de navigare */
+.nav-item ::deep a {
+    color: #d7d7d7; /* Culoarea textului */
+    border-radius: 4px; /* Bordură rotunjită */
+    height: 3rem; /* Înălțimea */
+    display: flex; /* Afișare flexibilă */
+    align-items: center; /* Aliniere pe verticală */
+    line-height: 3rem; /* Înălțimea liniei */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Tranziție la schimbarea culorii de fundal și a culorii textului */
+}
+
+.nav-item ::deep a.active {
+    background-color: rgba(255, 255, 255, 0.25); /* Fond semi-transparent pentru link-ul activ */
+    color: white; /* Culoarea textului pentru link-ul activ */
+}
+
+.nav-item ::deep a:hover {
+    background-color: rgba(255, 255, 255, 0.1); /* Fond semi-transparent la hover */
+    color: white; /* Culoarea textului la hover */
+}
+
+/* Stiluri pentru ecrane mari */
+@media (min-width: 641px) {
+    .navbar-toggler {
+        display: none; /* Ascunde butonul de deschidere/închidere a meniului pentru ecrane mari */
+    }
+
+    .collapse {
+        display: block; /* Afisează meniul pentru ecrane mari */
+    }
+
+    .navbar-toggler:hover {
+        background-color: rgba(255, 255, 255, 0.3); /* Schimbă culoarea butonului la hover */
+    }
+
+    .top-row:hover {
+        background-color: rgba(0, 0, 0, 0.6); /* Schimbă culoarea barei de sus la hover */
+    }
+
+    .navbar-brand:hover {
+        font-size: 1.2rem; /* Mărește dimensiunea fontului la hover */
+    }
+
+    .oi:hover {
+        transform: translateY(-2px); /* Efect de deplasare în sus la hover */
+    }
+
+    .nav-item:hover {
+        padding-bottom: 0.6rem; /* Mărește padding-ul la hover */
+        font-size: 0.95rem; /* Mărește dimensiunea fontului la hover */
+    }
+}

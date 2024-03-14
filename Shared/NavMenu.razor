@@ -1,0 +1,92 @@
+<!-- Bara de sus a aplicației -->
+<div class="top-row pl-4 navbar navbar-dark">
+    <!-- Titlul aplicației -->
+    <a class="navbar-brand" href="">DChat V1.0</a>
+    <!-- Buton pentru deschiderea/închiderea meniului de navigare -->
+    <button class="navbar-toggler" @onclick="ToggleNavMenu">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+</div>
+
+<!-- Meniul de navigare -->
+<div class="@NavMenuCssClass" @onclick="ToggleNavMenu">
+    <ul class="nav flex-column">
+        <!-- Element de meniu pentru Chat -->
+        <li class="nav-item px-3">
+            <NavLink class="nav-link" href="" Match="NavLinkMatch.All">
+                <span class="oi oi-home" aria-hidden="true"></span> Chat
+            </NavLink>
+        </li>
+        <!-- Element de meniu pentru Counter -->
+        <li class="nav-item px-3">
+            <NavLink class="nav-link" href="counter">
+                <span class="oi oi-plus" aria-hidden="true"></span> User's
+            </NavLink>
+        </li>
+        <!-- Element de meniu pentru Fetch Data -->
+        <li class="nav-item px-3">
+            <NavLink class="nav-link" href="fetchdata">
+                <span class="oi oi-list-rich" aria-hidden="true"></span> Date
+            </NavLink>
+        </li>
+    </ul>
+</div>
+
+@code {
+    private bool collapseNavMenu = true;
+
+    private string NavMenuCssClass => collapseNavMenu ? "collapse" : null;
+
+    private void ToggleNavMenu()
+    {
+        collapseNavMenu = !collapseNavMenu;
+    }
+}
+
+<style>
+    /* Stiluri pentru bara de sus */
+    .top-row {
+        background-color: #343a40;
+        padding: 0.5rem 1rem;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Stiluri pentru titlul aplicației */
+    .navbar-brand {
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: #fff;
+        text-decoration: none;
+    }
+
+    /* Stiluri pentru butonul de deschidere/închidere a meniului de navigare */
+    .navbar-toggler {
+        border: none;
+        background-color: transparent;
+        color: #fff;
+        cursor: pointer;
+    }
+
+    /* Stiluri pentru meniul care este ascuns când nu este deschis */
+    .collapse {
+        display: none;
+    }
+
+    /* Tranziție pentru înălțimea meniului */
+    .nav-menu {
+        transition: height 0.3s ease;
+    }
+
+    /* Stiluri pentru link-urile din meniul de navigare */
+    .nav-link {
+        color: #fff;
+        font-size: 1.2rem;
+        text-decoration: none;
+        transition: color 0.3s ease;
+    }
+
+    /* Stiluri pentru link-urile din meniul de navigare la hover */
+    .nav-link:hover {
+        color: #17a2b8;
+    }
+</style>

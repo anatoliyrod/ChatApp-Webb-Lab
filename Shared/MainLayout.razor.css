@@ -1,0 +1,94 @@
+/* Stiluri pentru clasa .page */
+.page {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Stiluri pentru clasa .main */
+.main {
+    flex: 1; /* Ocupă spațiul disponibil rămas */
+}
+
+/* Stiluri pentru clasa .sidebar */
+.sidebar {
+    background-image: linear-gradient(180deg, rgb(5, 39, 103) 0%, #3a0647 70%);
+    transition: width 0.3s ease; /* Tranziție pentru lățime cu durată de 0.3 secunde */
+}
+
+/* Stiluri pentru bara de sus (.top-row) */
+.top-row {
+    background-color: #f7f7f7;
+    border-bottom: 1px solid #d6d5d5;
+    justify-content: flex-end; /* Aliniere orizontală la sfârșit */
+    height: 3.5rem;
+    display: flex;
+    align-items: center; /* Aliniere verticală la centru */
+    transition: background-color 0.3s ease; /* Tranziție pentru culoare de fundal cu durată de 0.3 secunde */
+}
+
+/* Stiluri pentru link-uri și butoane în bara de sus */
+.top-row a, .top-row .btn-link {
+    white-space: nowrap; /* Nu permite linii noi */
+    margin-left: 1.5rem; /* Margine stânga */
+    transition: color 0.3s ease; /* Tranziție pentru culoarea textului cu durată de 0.3 secunde */
+}
+
+/* Stiluri pentru primul link din bara de sus */
+.top-row a:first-child {
+    overflow: hidden; /* Ascunde conținutul care depășește containerul */
+    text-overflow: ellipsis; /* Afisează puncte de suspensie pentru textul care depășește containerul */
+}
+
+/* Stiluri pentru link-uri și butoane când sunt hover */
+.top-row a:hover, .top-row .btn-link:hover {
+    color: #3a0647; /* Schimbă culoarea textului la hover */
+}
+
+/* Media query pentru ecrane mici (max-width: 640.98px) */
+@media (max-width: 640.98px) {
+    .top-row:not(.auth) {
+        display: none; /* Ascunde bara de sus pentru ecrane mici, cu excepția cazului în care are clasa "auth" */
+    }
+
+    .top-row.auth {
+        justify-content: space-between; /* Distanțează elementele în bara de sus */
+    }
+
+    .top-row a, .top-row .btn-link {
+        margin-left: 0; /* Elimină marginea stângă pentru link-uri și butoane */
+    }
+}
+
+/* Media query pentru ecrane mari (min-width: 641px) */
+@media (min-width: 641px) {
+    .page {
+        flex-direction: row; /* Schimbă direcția flex la rând */
+    }
+
+    .sidebar {
+        width: 250px; /* Lățimea barei laterale */
+        height: 100vh; /* Înălțimea barei laterale */
+        position: sticky;
+        top: 0; /* Bara laterală lipită în partea de sus a ecranului */
+    }
+
+    .top-row {
+        position: sticky;
+        top: 0; /* Bara de sus lipită în partea de sus a ecranului */
+        z-index: 1; /* Asigură că bara de sus este întotdeauna deasupra altor elemente */
+    }
+
+    .main > div {
+        padding-left: 2rem !important; /* Adaugă padding la stânga pentru conținutul principal */
+        padding-right: 1.5rem !important; /* Adaugă padding la dreapta pentru conținutul principal */
+    }
+
+    .sidebar:hover {
+        width: 280px; /* Mărește lățimea barei laterale la hover */
+    }
+
+    .top-row:hover {
+        background-color: #d1d1d1; /* Schimbă culoarea de fundal a barei de sus la hover */
+    }
+}
